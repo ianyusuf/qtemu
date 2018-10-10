@@ -1,6 +1,5 @@
 .Header {
-    background: #ed4b20;
-    /* background: #17a68a; */
+    background: #d71149;
     height: 80px;
 }
 
@@ -21,6 +20,25 @@
     color:#fff;
 }
 
+.Btn {
+    border: none;
+    color: white;
+    padding: 10px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.Btn-primary {
+    background-color: #cc421e;
+}
+
+.Btn-primary:hover {
+    background-color: #db461f;
+}
+
 .Menu-right {
     float: left;
 }
@@ -31,7 +49,7 @@ a {
 }
 
 a:hover{
-    color: #555;
+    color: #edb625;
     transition: all .2s ease-in-out;
 }
 
@@ -60,7 +78,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #000;
+    color: #ffc427;
     transition: all .2s ease-in-out;
 }
 
@@ -68,57 +86,50 @@ nav a:hover {
     margin-top: 10px;
 }
 
-.Meetup {
+.Space-20 {
+    margin-top: 20px;
+}
+
+.Profile {
+}
+
+.Profile-bg {
     background: #ff663d;
-    height: 340px;
+    height: 280px;
 }
 
-.Meetup-container {
-    padding:20px;
+.Profile-container {
+    padding: 0 35px;
 }
 
-.Meetup-image {
+.Profile-image {
     float: left;
     display: inline;
+    margin-top: 30px;
 }
 
-.Meetup-desc {
+.Profile-desc {
     margin-left: 80px;
     float: left;
     text-align: left;
-    display:inline;
+    display: inline;
     color: #000;
 }
 
-.Desc-left {
+.Profile-desc-left {
     width: 100px;
-    padding-bottom: 25px;
+    padding-bottom: 20px;
 }
 
-.Desc-right {
+.Profile-desc-right {
     width: 200px;
-    padding-bottom: 25px;
-}
-
-.Btn {
-    border: none;
-    color: white;
-    padding: 10px 40px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 18px;
-}
-
-.Btn-primary {
-    background-color: #cc421e; /* Green */
-}
-
-.Meetup-title {
-    
+    padding-bottom: 20px;
 }
 
 .Next {
+}
+
+.Next-bg {
     background: #ff663d;
 }
 
@@ -126,12 +137,35 @@ nav a:hover {
     padding: 5px 20px;
 }
 
+.Next-title {
+    margin: 10px 0;
+    font-weight: 600;
+}
+
+.Next-date {
+    color: #333;
+    margin: 10px 0;
+    font-weight: 600;
+}
+
+.Next-content {
+}
+
 .About {
-    background: #fff;
 }
 
 .About-container {
-    padding: 5px 20px;
+    padding: 0;
+}
+
+.About-bg {
+}
+
+.About-line {
+    line-height: 250%;
+}
+
+.Members {
 }
 
 .Members-group {
@@ -142,12 +176,12 @@ nav a:hover {
     float: left;
 }
 
-.Members-all {
+.Members-see-all {
     float: right;
     margin-right: 40px;
 }
 
-.Members {
+.Members-bg {
     background: #ff663d;
     height: 140px;
 }
@@ -165,7 +199,7 @@ nav a:hover {
     margin-left: 80px;
     float: left;
     text-align: left;
-    display:inline;
+    display: inline;
     color: #000;
 }
 
@@ -179,6 +213,9 @@ nav a:hover {
     padding-bottom: 25px;
 }
 
+.Past {
+}
+
 .Past-group {
     height: 80px;
 }
@@ -187,16 +224,55 @@ nav a:hover {
     float: left;
 }
 
-.Past-all {
+.Past-see-all {
     float: right;
     margin-right: 40px;
 }
 
-.Past {
+.Past-bg {
     background: #ff663d;
     width: 33%;
 }
 
+.Past-panel {
+    margin-left: 3px;
+    width: 33%;
+    display: inline-block;
+}
+
 .Past-container {
-    padding: 5px 20px;
+    background: #ff663d;
+    margin: 5px 30px;
+    padding: 20px;
+}
+
+.Past-desc {
+}
+
+.Past-desc-title {
+    font-weight: 600;
+}
+
+.Line-separator {
+    height: 1px;
+    border-bottom: 1px solid #000;
+    margin: 10px 0;
+}
+
+.Past-desc-content {
+    margin: 10px 0 80px;
+    font-weight: 600;
+}
+
+.Past-desc-people {
+    margin: 10px 0;
+    font-weight: 600;
+}
+
+.Copyright {
+    margin: 60px 0;
+}
+
+.Copyright-content {
+    text-align: center;
 }
