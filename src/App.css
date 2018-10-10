@@ -1,0 +1,202 @@
+.Header {
+    background: #ed4b20;
+    /* background: #17a68a; */
+    height: 80px;
+}
+
+.Header-container {
+	padding: 0.01em 16px;
+}
+
+.Container {
+    width: 95%;
+	margin: 0 auto;
+}
+
+.Logo {
+    float: left;
+    font-size: 2em;
+    font-weight: 600;
+    padding-top: 15px;
+    color:#fff;
+}
+
+.Menu-right {
+    float: left;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover{
+    color: #555;
+    transition: all .2s ease-in-out;
+}
+
+nav {
+    float: right;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 70px;
+    padding-top: 30px;
+    position: relative;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #000;
+    transition: all .2s ease-in-out;
+}
+
+.Space-10 {
+    margin-top: 10px;
+}
+
+.Meetup {
+    background: #ff663d;
+    height: 340px;
+}
+
+.Meetup-container {
+    padding:20px;
+}
+
+.Meetup-image {
+    float: left;
+    display: inline;
+}
+
+.Meetup-desc {
+    margin-left: 80px;
+    float: left;
+    text-align: left;
+    display:inline;
+    color: #000;
+}
+
+.Desc-left {
+    width: 100px;
+    padding-bottom: 25px;
+}
+
+.Desc-right {
+    width: 200px;
+    padding-bottom: 25px;
+}
+
+.Btn {
+    border: none;
+    color: white;
+    padding: 10px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+}
+
+.Btn-primary {
+    background-color: #cc421e; /* Green */
+}
+
+.Meetup-title {
+    
+}
+
+.Next {
+    background: #ff663d;
+}
+
+.Next-container {
+    padding: 5px 20px;
+}
+
+.About {
+    background: #fff;
+}
+
+.About-container {
+    padding: 5px 20px;
+}
+
+.Members-group {
+    height: 80px;
+}
+
+.Members-title {
+    float: left;
+}
+
+.Members-all {
+    float: right;
+    margin-right: 40px;
+}
+
+.Members {
+    background: #ff663d;
+    height: 140px;
+}
+
+.Members-container {
+    padding:20px;
+}
+
+.Members-image {
+    float: left;
+    display: inline;
+}
+
+.Members-desc {
+    margin-left: 80px;
+    float: left;
+    text-align: left;
+    display:inline;
+    color: #000;
+}
+
+.Members-left {
+    width: 200px;
+    padding-bottom: 25px;
+}
+
+.Members-right {
+    width: 200px;
+    padding-bottom: 25px;
+}
+
+.Past-group {
+    height: 80px;
+}
+
+.Past-title {
+    float: left;
+}
+
+.Past-all {
+    float: right;
+    margin-right: 40px;
+}
+
+.Past {
+    background: #ff663d;
+    width: 33%;
+}
+
+.Past-container {
+    padding: 5px 20px;
+}
