@@ -1,57 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import PropTypes from 'prop-types'
+import AvatarMember from './AvatarMember'
+import Button from './Button'
+import Separator from './Separator'
+import Navbar from './NavBar'
+import EventDetail from './EventDetail'
 
 class App extends React.Component {
   render() {
     return (
       <div class="App">
-        <header class="Header">
-            <div class="Container">
-                <div class="Logo">QTemu</div>
-                <nav class="Menu-right">
-                    <ul>
-                        <li><a href="#">Create Meetup</a></li>
-                        <li><a href="#">Explore</a></li>
-                    </ul>
-                </nav>
-                <nav>
-                    <ul>
-                        <li><a href="#">Login</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-        <div class="Space-10"></div>
-        <div class="Profile">
-            <div class="Container">
-                <div class="Profile-bg">
-                    <div class="Profile-container">
-                        <div class="Profile-image">
-                            <img src="img/user.jpg" width="220px" />
-                        </div>
-                        <div class="Profile-desc">
-                            <h2>Hacktiv8 Meetup</h2>
-                            <table>
-                                <tr>
-                                    <td class="Profile-desc-left">Location</td>
-                                    <td class="Profile-desc-right">Jakarta, Indonesia</td>
-                                </tr>
-                                <tr>
-                                    <td class="Profile-desc-left">Members</td>
-                                    <td class="Profile-desc-right">1,078</td>
-                                </tr>
-                                <tr>
-                                    <td class="Profile-desc-left">Organizers</td>
-                                    <td class="Profile-desc-right">Adhy Wiranata</td>
-                                </tr>
-                            </table><a href="#"><button class="Btn Btn-primary">Join Us</button></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="Space-10"></div>
+        <Navbar />
+        <EventDetail />
         <div class="Next">
             <div class="Container">
                 <div class="Meetup-title">
@@ -77,7 +38,6 @@ class App extends React.Component {
                 </div>
             </div>
         </div>
-        <div class="Space-10"></div>
         <div class="About">
             <div class="Container">
                 <div class="Meetup-title">
@@ -93,21 +53,24 @@ class App extends React.Component {
                 </div>
             </div>
         </div>
-        <div class="Space-10"></div>
         <div class="Members">
             <div class="Container">
                 <div class="Members-group">
                     <div class="Members-title">
                         <h2>Members</h2>
                     </div>
-                    <div class="Members-see-all"><a href="#">
+                    <div class="Members-see-all">
+                        <a href="#">
                             <h4>See all</h4>
-                        </a></div>
+                        </a>
+                    </div>
                 </div>
                 <div class="Container">
                     <div class="Members-bg">
                         <div class="Members-container">
-                            <div class="Members-image"><img src="img/members.png" width="100px" /></div>
+                            <div class="Members-image">
+                                <AvatarMember />
+                            </div>
                             <div class="Members-desc">
                                 <h3>Hacktiv8 Meetup</h3>
                                 <table>
@@ -122,16 +85,17 @@ class App extends React.Component {
                 </div>
             </div>
         </div>
-        <div class="Space-10"></div>
         <div class="Past">
             <div class="Container">
                 <div class="Past-group">
                     <div class="Past-title">
                         <h2>Past Meetups</h2>
                     </div>
-                    <div class="Past-see-all"><a href="#">
+                    <div class="Past-see-all">
+                        <a href="#">
                             <h4>See all</h4>
-                        </a></div>
+                        </a>
+                    </div>
                 </div>
                 <div class="Past-panel">
                     <div class="Past-container">
@@ -141,7 +105,7 @@ class App extends React.Component {
                             <div class="Past-desc-content">#39 JakartaJS April Meetup with Kumparan</div>
                             <div class="Past-desc-people">139 <span class="Past-desc-people-span">Went</span></div>
                             <a href="#">
-                              <button class="Btn Btn-primary">View</button>
+                                <Button>View</Button>
                             </a>
                         </div>
                     </div>
@@ -154,7 +118,7 @@ class App extends React.Component {
                             <div class="Past-desc-content">#39 JakartaJS April Meetup with Blibli</div>
                             <div class="Past-desc-people">139 <span class="Past-desc-people-span">Went</span></div>
                             <a href="#">
-                              <button class="Btn Btn-primary">View</button>
+                                <Button>View</Button>
                             </a>
                         </div>
                     </div>
@@ -167,18 +131,14 @@ class App extends React.Component {
                             <div class="Past-desc-content">#39 JakartaJS April Meetup with Hacktiv8</div>
                             <div class="Past-desc-people">139 <span class="Past-desc-people-span">Went</span></div>
                             <a href="#">
-                              <button class="Btn Btn-primary">View</button>
+                                <Button>View</Button>
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="Space-20"></div>
-        <div class="Container">
-            <div class="Line-separator" />
-        </div>
-        <div class="Space-20"></div>
+        <Separator />
         <div class="Copyright">
             <div class="Container">
                 <div class="Copyright-content">
@@ -191,4 +151,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default App
