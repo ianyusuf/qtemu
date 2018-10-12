@@ -4,7 +4,7 @@ import './index.css'
 const Link = (props) => (
     <a
     {...props}
-     href=""
+    
     />
 )
 

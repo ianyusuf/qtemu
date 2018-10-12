@@ -1,0 +1,17 @@
+.Event-group {
+    height: 80px;
+}
+
+.Event-title {
+    float: left;
+}
+
+.Event-see-all {
+    float: right;
+    margin-right: 40px;
+}
+
+.Event-bg {
+    background: #ff663d;
+    width: 33%;
+}

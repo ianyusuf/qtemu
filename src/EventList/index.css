@@ -1,0 +1,28 @@
+.Event-panel {
+    margin-left: 3px;
+    width: 33%;
+    display: inline-block;
+}
+
+.Event-container {
+    background: #ff663d;
+    margin: 5px 30px;
+    padding: 20px;
+}
+
+.Event-desc {
+}
+
+.Event-desc-title {
+    font-weight: 600;
+}
+
+.Event-desc-content {
+    margin: 10px 0 80px;
+    font-weight: 600;
+}
+
+.Event-desc-people {
+    margin: 10px 0;
+    font-weight: 600;
+}
