@@ -34,3 +34,42 @@
     width: 200px;
     padding-bottom: 20px;
 }
+
+.Next {
+}
+
+.Next-bg {
+    background: #ff663d;
+}
+
+.Next-container {
+    padding: 5px 20px;
+}
+
+.Next-title {
+    margin: 10px 0;
+    font-weight: 600;
+}
+
+.Next-date {
+    color: #333;
+    margin: 10px 0;
+    font-weight: 600;
+}
+
+.Next-content {
+}
+
+.About {
+}
+
+.About-container {
+    padding: 0;
+}
+
+.About-bg {
+}
+
+.About-line {
+    line-height: 250%;
+}

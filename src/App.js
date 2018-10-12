@@ -3,6 +3,7 @@ import './App.css';
 import PropTypes from 'prop-types'
 import AvatarMember from './AvatarMember'
 import Button from './Button'
+import Link from './Link'
 import Separator from './Separator'
 import Navbar from './NavBar'
 import EventDetail from './EventDetail'
@@ -13,46 +14,6 @@ class App extends React.Component {
       <div class="App">
         <Navbar />
         <EventDetail />
-        <div class="Next">
-            <div class="Container">
-                <div class="Meetup-title">
-                    <h2>Next Meetup</h2>
-                </div>
-                <div class="Container">
-                    <div class="Next-bg">
-                        <div class="Next-container">
-                            <div class="Next-title">Awesome meetup and event</div>
-                            <div class="Next-date">25 January 2019</div>
-                            <div class="Next-content">
-                                <p>Hello, JavaScript & Node.js Ninjas!<br />
-                                Get ready for our monthly meetup JakartaJS! This will be our fifth meetup of 2018!<br />
-                                The meetup format will contain some short stories and technical talks.<br />
-                                If you have a short announcement you'd like to share with the audience, you may do so during open mic announcements.</p>
-                                <p>Remember to bring a photo ID to get through building security.</p>
-                                -----
-                                <p>See you there!</p>
-                                <p>Best, Hengki, Gioovani, Sofian, Riza, Agung The JakartaJS Organizers</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="About">
-            <div class="Container">
-                <div class="Meetup-title">
-                    <h2>About Meetup</h2>
-                </div>
-                <div class="Container">
-                    <div class="About-bg">
-                        <div class="About-container">
-                            <p class="About-line">Come and meet other developers interested in the JavaScript and it's library in the Greater Jakarta area.<br />
-                            Twitter: @JakartaJS and we use the hashtag #jakartajs</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
         <div class="Members">
             <div class="Container">
                 <div class="Members-group">
