@@ -1,26 +1,32 @@
-import React from 'react';
+import React, { Component, Fragment } from 'react';
 import './index.css';
-import AvatarMember from '../AvatarMember'
+import ImageMember from '../Components/ImageMember'
   
-class MemberList extends React.Component {
+class MemberList extends Component {
     render() {
+        const { memberImage, memberTitle, memberUser, memberGroup } = this.props
+
         return (
-            <section className="Members-list">
-                <div className="Members-container">
-                    <div className="Members-image">
-                        <AvatarMember />
-                    </div>
-                    <div className="Members-desc">
-                        <h3>Hacktiv8 Meetup</h3>
-                        <table>
-                            <tr>
-                                <td className="Members-left">Adhy Wiranata</td>
-                                <td className="Members-right">4 others</td>
-                            </tr>
-                        </table>
+            <Fragment>
+                <div className="Members-list">
+                    <div className="Members-container">
+                        <div className="Members-image-container">
+                            <ImageMember memberImage={ memberImage } />
+                        </div>
+                        <div className="Members-desc">
+                            <h3>{ memberTitle }</h3>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td className="Members-left">{ memberUser }</td>
+                                        <td className="Members-right">{ memberGroup } others</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
-            </section>
+            </Fragment>
         );
     }
 }

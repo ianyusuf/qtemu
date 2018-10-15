@@ -1,7 +1,7 @@
 import React from 'react'
 import './index.css'
 
-const AvatarUser = (props) => (
+const ImageUser = (props) => (
     <img
       {...props}
       src="img/user.jpg"
@@ -9,4 +9,4 @@ const AvatarUser = (props) => (
     />
 )
 
-export default AvatarUser
+export default ImageUser

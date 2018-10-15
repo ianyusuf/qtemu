@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './index.css';
-import Link from '../Link'
+import Link from '../Components/Link'
 
-class Navbar extends React.Component {
+class Navbar extends Component {
     render() {
         return (
             <header className="Header">

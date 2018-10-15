@@ -1,16 +1,21 @@
 .Members-list {
     background: #ff663d;
     height: 140px;
+    margin: 20px 0;
 }
 
 .Members-container {
     padding:20px;
 }
 
-.Members-image {
+.Members-image-container {
     float: left;
     display: inline;
     margin-left: 40px;
+}
+
+.Members-image {
+    width: 100px;
 }
 
 .Members-desc {

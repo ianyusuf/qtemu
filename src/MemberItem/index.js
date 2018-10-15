@@ -1,12 +1,35 @@
-import React from 'react';
+import React, { Component, Fragment } from 'react';
 import './index.css';
-import Link from '../Link'
+import Link from '../Components/Link'
 import MemberList from '../MemberList'
-  
-class MemberItem extends React.Component {
+
+class MemberItem extends Component {
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            memberData: [
+                {
+                memberAvatar: "img/member.png",
+                memberTitle: "Blibli Meetup",
+                memberUser: "Hadyan Yusuf",
+                memberGroup: 8
+                },
+                {
+                memberAvatar: "img/member.png",
+                memberTitle: "Hacktiv8 Meetup",
+                memberUser: "Adhy Wiranata",
+                memberGroup: 4
+                }
+            ]
+        }
+    }
+
     render() {
+        const { memberData } = this.state
+
         return (
-            <section className="Members">
+            <Fragment>
                 <div className="Container">
                     <div className="Members-group">
                         <div className="Members-title">
@@ -19,10 +42,19 @@ class MemberItem extends React.Component {
                         </div>
                     </div>
                     <div className="Container">
-                        <MemberList />
+                        {
+                            memberData
+                                .map((data, index) => (
+                                <MemberList key={index}
+                                memberTitle={data.memberTitle}
+                                memberUser={data.memberUser}
+                                memberGroup={data.memberGroup} 
+                                />
+                            ))
+                        }
                     </div>
                 </div>
-            </section>
+            </Fragment>
         );
     }
 }

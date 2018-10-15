@@ -4,7 +4,7 @@ import './index.css';
 class Separator extends React.Component {
   render() {
     return (
-        <div class="Separator" />
+        <div className="Separator" />
     );
   }
 }
