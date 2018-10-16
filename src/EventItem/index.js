@@ -33,7 +33,8 @@ class EventItem extends Component {
     }
 
     render() {
-        const { eventData } = this.state
+        // const { eventData } = this.state
+        const { movieData } = this.props
 
         return (
             <Fragment className="EventItem">
@@ -50,12 +51,13 @@ class EventItem extends Component {
                     </div>
                     <div className="Event-list">
                         {
-                            eventData
+                            movieData
                                 .map((data, index) => (
                                 <EventList key={index}
-                                eventDate={data.eventDate}
-                                eventTitle={data.eventTitle}
-                                eventUser={data.eventUser} 
+                                movieTitle={data.title}
+                                movieDate={data.release_date}
+                                movieDesc={data.opening_crawl} 
+                                movieMember={data.episode_id}
                                 />
                             ))
                         }

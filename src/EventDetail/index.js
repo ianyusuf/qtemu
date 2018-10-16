@@ -2,10 +2,38 @@ import React, { Component, Fragment } from 'react';
 import './index.css';
 import ImageUser from '../Components/ImageUser'
 import Button from '../Components/Button'
-import Link from '../Components/Link'
   
 class EventDetail extends Component {
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            joined: false
+        }
+    }
+
+    handleClick = () => {
+        this.setState(state => ({
+            joined: !state.joined
+        }))
+    }
+    
+    componentWillUnmount() {
+        console.log('Mati')
+    }
+
+    componentWillMount() {
+        console.log('Sebelum Lahir')
+    }
+
+    componentDidMount() {
+        console.log('Setelah Lahir')
+    }
+
     render() {
+        console.log('Lahir')
+        const { eventTitle, eventLocation, eventMembers, eventOrganizers } = this.props
+
         return (
             <Fragment>
                 <div className="Profile">
@@ -13,29 +41,33 @@ class EventDetail extends Component {
                         <div className="Profile-bg">
                             <div className="Profile-container">
                                 <div className="Profile-image">
-                                    <ImageUser />
+                                    <ImageUser className="Image-user" />
                                 </div>
                                 <div className="Profile-desc">
-                                    <h2>Hacktiv8 Meetup</h2>
+                                    <h2>{ eventTitle }</h2>
                                     <table>
                                         <tbody>
                                             <tr>
                                                 <td className="Profile-desc-left">Location</td>
-                                                <td className="Profile-desc-right">Jakarta, Indonesia</td>
+                                                <td className="Profile-desc-right">{ eventLocation }</td>
                                             </tr>
                                             <tr>
                                                 <td className="Profile-desc-left">Members</td>
-                                                <td className="Profile-desc-right">1,078</td>
+                                                <td className="Profile-desc-right">{ eventMembers }</td>
                                             </tr>
                                             <tr>
                                                 <td className="Profile-desc-left">Organizers</td>
-                                                <td className="Profile-desc-right">Adhy Wiranata</td>
+                                                <td className="Profile-desc-right">{ eventOrganizers }</td>
                                             </tr>
                                         </tbody>
                                     </table>
-                                    <Link href="">
-                                        <Button>Join Us</Button>
-                                    </Link>
+                                        <Button
+                                            onClick={ this.handleClick }
+                                        >
+                                            { this.state.joined ? "Joined" : "Join us" }
+                                        </Button>
+                                        
+                                        { this.state.joined }
                                 </div>
                             </div>
                         </div>

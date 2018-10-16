@@ -10,23 +10,24 @@ class MemberItem extends Component {
         this.state = {
             memberData: [
                 {
-                memberAvatar: "img/member.png",
-                memberTitle: "Blibli Meetup",
-                memberUser: "Hadyan Yusuf",
-                memberGroup: 8
+                    memberImage: "img/member.png",
+                    memberTitle: "Blibli Meetup",
+                    memberUser: "Hadyan Yusuf",
+                    memberGroup: 8
                 },
                 {
-                memberAvatar: "img/member.png",
-                memberTitle: "Hacktiv8 Meetup",
-                memberUser: "Adhy Wiranata",
-                memberGroup: 4
+                    memberImage: "img/member.png",
+                    memberTitle: "Hacktiv8 Meetup",
+                    memberUser: "Adhy Wiranata",
+                    memberGroup: 4
                 }
             ]
         }
     }
 
     render() {
-        const { memberData } = this.state
+        // const { memberData } = this.state
+        const { peopleData } = this.props
 
         return (
             <Fragment>
@@ -42,15 +43,29 @@ class MemberItem extends Component {
                         </div>
                     </div>
                     <div className="Container">
-                        {
-                            memberData
+                        {/* {
+                            members
                                 .map((data, index) => (
                                 <MemberList key={index}
+                                memberImage={data.memberImage}
                                 memberTitle={data.memberTitle}
                                 memberUser={data.memberUser}
                                 memberGroup={data.memberGroup} 
                                 />
                             ))
+                        } */}
+                        { 
+                            peopleData.length <= 0 ?
+                            "Loading..."
+                            :
+                                peopleData
+                                    .map((data, index) => (
+                                    <MemberList key={index}
+                                    peopleTitle={data.title}
+                                    peopleBirth={data.birth}
+                                    peopleEye={data.eye}
+                                    />
+                                ))
                         }
                     </div>
                 </div>
