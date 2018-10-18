@@ -17,9 +17,14 @@
     font-weight: 600;
 }
 
+.Event-desc-date {
+    float:right;
+    font-weight: 400;
+}
+
 .Event-desc-content {
-    margin: 10px 0 80px;
-    font-weight: 600;
+    font-weight: 400;
+    height: 280px;
 }
 
 .Event-desc-people {

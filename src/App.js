@@ -54,8 +54,8 @@ class App extends Component {
                 movie: movieData
                     .slice(0,3)
                     .map(movie => ({
-                    date: movie.release_date,
                     title: movie.title,
+                    release: movie.release_date,
                     desc: movie.opening_crawl,
                     member: movie.episode_id
                 }))
@@ -64,10 +64,8 @@ class App extends Component {
     }
 
     render() {
-        const { members } = this.state
-
         return (
-            <Fragment className="App">
+            <Fragment>
                 <Navbar />
                 <EventDetail
                     eventTitle="Hacktiv8 Meetup"

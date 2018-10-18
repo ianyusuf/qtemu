@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import './index.css';
-import ImageMember from '../Components/ImageMember'
+// import ImageMember from '../Components/ImageMember'
   
 class MemberList extends Component {
     render() {

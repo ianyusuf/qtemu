@@ -12,7 +12,9 @@ class EventList extends Component {
             <section className="Event-panel">
                 <div className="Event-container">
                     <div className="Event-desc">
-                        <div className="Event-desc-title">{ movieDate }</div>
+                        <div className="Event-desc-title">{ movieTitle }
+                            <span className="Event-desc-date">{ movieDate }</span>
+                        </div>
                         <Separator />
                         <div className="Event-desc-content">{ movieDesc }</div>
                         <div className="Event-desc-people">{ movieMember } <span className="Event-desc-people-span">Went</span></div>
