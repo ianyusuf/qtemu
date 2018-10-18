@@ -16,7 +16,7 @@ class EventList extends Component {
                         <Separator />
                         <div className="Event-desc-content">{ movieDesc }</div>
                         <div className="Event-desc-people">{ movieMember } <span className="Event-desc-people-span">Went</span></div>
-                            <Button>View</Button>
+                        <Button>View</Button>
                     </div>
                 </div>
             </section>

@@ -51,6 +51,9 @@ class EventItem extends Component {
                     </div>
                     <div className="Event-list">
                         {
+                            movieData.length <= 0 ?
+                            "Loading..."
+                            :
                             movieData
                                 .map((data, index) => (
                                 <EventList key={index}

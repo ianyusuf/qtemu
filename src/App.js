@@ -47,7 +47,7 @@ class App extends Component {
                 }))
             })
         })
-        axios.get('https://swapi.co/api/movies/')
+        axios.get('https://swapi.co/api/films/')
         .then(response => response.data.results)
         .then(movieData => {
             this.setState({ 

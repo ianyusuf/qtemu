@@ -58,14 +58,14 @@ class MemberItem extends Component {
                             peopleData.length <= 0 ?
                             "Loading..."
                             :
-                                peopleData
-                                    .map((data, index) => (
-                                    <MemberList key={index}
-                                    peopleTitle={data.title}
-                                    peopleBirth={data.birth}
-                                    peopleEye={data.eye}
-                                    />
-                                ))
+                            peopleData
+                                .map((data, index) => (
+                                <MemberList key={index}
+                                peopleTitle={data.title}
+                                peopleBirth={data.birth}
+                                peopleEye={data.eye}
+                                />
+                            ))
                         }
                     </div>
                 </div>
