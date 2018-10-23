@@ -5,33 +5,6 @@ import Separator from '../Components/Separator'
 import EventList from '../EventList'
 
 class EventItem extends Component {
-    constructor(props) {
-        super(props)
-
-        this.state = {
-            eventData: [
-                {
-                    eventDate: "27 November 2017",
-                    eventTitle: "#39 JakartaJS April Meetup with Kumparan",
-                    eventUser: 433,
-                    eventLink: ""
-                },
-                {
-                    eventDate: "27 October 2017",
-                    eventTitle: "#38 JakartaJS April Meetup with Blibli",
-                    eventUser: 245,
-                    eventLink: ""
-                },
-                {
-                    eventDate: "27 September 2017",
-                    eventTitle: "#37 JakartaJS April Meetup with Hacktiv8",
-                    eventUser: 114,
-                    eventLink: ""
-                }
-            ]
-        }
-    }
-
     render() {
         // const { eventData } = this.state
         const { movieData } = this.props

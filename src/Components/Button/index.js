@@ -1,11 +1,34 @@
 import React from 'react'
-import './index.css'
+import PropTypes from 'prop-types'
+import { withStyles } from '@material-ui/core/styles'
+import Button from '@material-ui/core/Button'
 
-const Button = (props) => (
-  <button
-    {...props}
-    className="Btn Btn-primary"
-  />
-)
+const styles = theme => ({
+    button: {
+        margin: theme.spacing.unit,
+    },
+    input: {
+        display: 'none',
+    },
+});
 
-export default Button
+function ContainedButtons(props) {
+    const { color, classes, children } = props;
+    return (
+      <div>
+        <Button variant="contained" color={color}  size="large" className={classes.button}>
+            {children}
+        </Button>
+      </div>
+    );
+}
+
+ContainedButtons.defaultProps = {
+    color:"primary"
+}
+
+ContainedButtons.propTypes = {
+    classes: PropTypes.object.isRequired,
+};
+
+export default withStyles(styles)(ContainedButtons);

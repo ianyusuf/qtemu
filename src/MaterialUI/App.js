@@ -12,6 +12,9 @@ import red from '@material-ui/core/colors/red'
 const myTheme = createMuiTheme({
     palette: {
         primary: red,
+        secondary: {
+            main: '#edb625'
+        }
     },
     typography: {
         fontSize: 12

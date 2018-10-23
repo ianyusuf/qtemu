@@ -62,6 +62,7 @@ class EventDetail extends Component {
                                         </tbody>
                                     </table>
                                         <Button
+                                            
                                             onClick={ this.handleClick }
                                         >
                                             { this.state.joined ? "Joined" : "Join us" }

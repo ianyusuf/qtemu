@@ -4,27 +4,6 @@ import Link from '../Components/Link'
 import MemberList from '../MemberList'
 
 class MemberItem extends Component {
-    constructor(props) {
-        super(props)
-
-        this.state = {
-            memberData: [
-                {
-                    memberImage: "img/member.png",
-                    memberTitle: "Blibli Meetup",
-                    memberUser: "Hadyan Yusuf",
-                    memberGroup: 8
-                },
-                {
-                    memberImage: "img/member.png",
-                    memberTitle: "Hacktiv8 Meetup",
-                    memberUser: "Adhy Wiranata",
-                    memberGroup: 4
-                }
-            ]
-        }
-    }
-
     render() {
         // const { memberData } = this.state
         const { peopleData } = this.props

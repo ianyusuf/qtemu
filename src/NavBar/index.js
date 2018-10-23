@@ -1,34 +1,44 @@
-import React, { Component } from 'react';
-import './index.css';
-import Link from '../Components/Link'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { withStyles } from '@material-ui/core/styles';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
+import IconButton from '@material-ui/core/IconButton';
+import MenuIcon from '@material-ui/icons/Menu';
 
-class Navbar extends Component {
-    render() {
-        return (
-            <header className="Header">
-                <div className="Container">
-                    <div className="Logo">QTemu</div>
-                    <nav className="Menu-right">
-                        <ul>
-                            <li>
-                                <Link href="">Create Meetup</Link>
-                            </li>
-                            <li>
-                                <Link href="">Explore</Link>
-                            </li>
-                        </ul>
-                    </nav>
-                    <nav>
-                        <ul>
-                            <li>
-                                <Link href="">Login</Link>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-            </header>
-        );
-    }
+const styles = {
+  root: {
+    flexGrow: 1,
+  },
+  grow: {
+    flexGrow: 1,
+  },
+  menuButton: {
+    marginLeft: -12,
+    marginRight: 20,
+  },
+};
+
+function ButtonAppBar(props) {
+  const { classes } = props;
+  return (
+    <div className={classes.root}>
+        <AppBar position="static" style={{ background: '#d71149'}}>
+            <Toolbar>
+                <Typography variant="h5" color="inherit" className={classes.grow}>
+                    QTemu
+                </Typography>
+                <Button color="inherit">Login</Button>
+            </Toolbar>
+        </AppBar>
+    </div>
+  );
 }
 
-export default Navbar
+ButtonAppBar.propTypes = {
+  classes: PropTypes.object.isRequired,
+};
+
+export default withStyles(styles)(ButtonAppBar);
