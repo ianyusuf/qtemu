@@ -1,120 +1,72 @@
-import React, { Component, Fragment } from 'react';
-import axios from 'axios';
-import './App.css';
-import Navbar from './NavBar'
-import EventDetail from './EventDetail'
-import MemberItem from './MemberItem'
-import EventItem from './EventItem'
-import Footer from './Footer'
-import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles'
-import red from '@material-ui/core/colors/red'
-
-const myTheme = createMuiTheme({
-    palette: {
-        primary: red,
-    },
-    typography: {
-        fontSize: 12
-    },
-    spacing: {
-        unit: 10
-    }
-})
+import React, { Component } from 'react';
+import axios from 'axios'
+import NavBar from './components/NavBar'
+import About from './pages/About'
+import Home from './pages/Home'
+import User from './pages/User'
+import { BrowserRouter, Route } from 'react-router-dom'
 
 class App extends Component {
-    constructor(props) {
-        super(props)
+  constructor(props) {
+    super(props)
 
-        this.state = {
-            movie: [],
-            people: [],            
-            memberData: [
-                {
-                    memberImage: "img/member.png",
-                    memberTitle: "Blibli Meetup",
-                    memberUser: "Hadyan Yusuf",
-                    memberGroup: 8
-                },
-                {
-                    memberImage: "img/member.png",
-                    memberTitle: "Hacktiv8 Meetup",
-                    memberUser: "Adhy Wiranata",
-                    memberGroup: 4
-                }
-            ],
-            eventData: [
-                {
-                    eventDate: "27 November 2017",
-                    eventTitle: "#39 JakartaJS April Meetup with Kumparan",
-                    eventUser: 433,
-                    eventLink: ""
-                },
-                {
-                    eventDate: "27 October 2017",
-                    eventTitle: "#38 JakartaJS April Meetup with Blibli",
-                    eventUser: 245,
-                    eventLink: ""
-                },
-                {
-                    eventDate: "27 September 2017",
-                    eventTitle: "#37 JakartaJS April Meetup with Hacktiv8",
-                    eventUser: 114,
-                    eventLink: ""
-                }
-            ]
-        }
+    this.state = {
+      members: [],
+      events: [],
     }
+  }
 
-    componentDidMount() {
-        // fetch data members
-        console.log('start fetching')
-        axios.get('https://swapi.co/api/people/')
-        .then(response => response.data.results)
-        .then(peopleData => {
-            this.setState({ 
-                people: peopleData
-                    .slice(0,3)
-                    .map(people => ({
-                    title: people.name,
-                    birth: people.birth_year,
-                    eye: people.eye_color
-                }))
-            })
+  componentDidMount() {
+    axios.get('https://swapi.co/api/people/')
+      .then(response => response.data.results)
+      .then(membersData => {
+        this.setState({
+          members: membersData
+            .slice(0, 3)
+            .map(member => ({
+              name: member.name,
+              tahunLahir: member.birth_year,
+            }))
         })
-        axios.get('https://swapi.co/api/films/')
-        .then(response => response.data.results)
-        .then(movieData => {
-            this.setState({ 
-                movie: movieData
-                    .slice(0,3)
-                    .map(movie => ({
-                    title: movie.title,
-                    release: movie.release_date,
-                    desc: movie.opening_crawl,
-                    member: movie.episode_id
-                }))
-            })
-        })
-    }
+      })
 
-    render() {
-        return (
-            <Fragment>
-                <MuiThemeProvider theme={myTheme}>
-                    <Navbar />
-                    <EventDetail
-                        eventTitle="Hacktiv8 Meetup"
-                        eventLocation="Jakarta, Indonesia"
-                        eventMembers={ 1.078 }
-                        eventOrganizers="Adhy Wiranata"
-                    />
-                    <MemberItem peopleData={ this.state.people } />
-                    <EventItem movieData={ this.state.movie }  />
-                    <Footer />
-                </MuiThemeProvider>
-            </Fragment>
-        );
-    }
+    axios.get('https://swapi.co/api/films/')
+    .then(response => response.data.results)
+    .then(filmsData => {
+      this.setState({
+        events: filmsData
+          .slice(0, 3)
+          .map(film => ({
+            title: film.title,
+            owner: film.producer,
+            date: film.release_date,
+            description: film.opening_crawl,
+          }))
+      })
+    })
+  }
+
+  render() {
+    const { members, events } = this.state
+
+    return (
+      <React.Fragment>
+        <BrowserRouter>
+          <div style={{ paddingLeft: 16, paddingRight: 16 }}>
+
+          <NavBar />
+            <Route exact path="/" render={() => (
+              <Home members={members} events={events}/>
+            )} />
+            <Route exact path="/about" component={About} />
+            <Route path="/about/me" render={() => <h1>about me</h1>} />
+            
+            <Route path="/user/:id" component={User}/>
+          </div>
+        </BrowserRouter>         
+      </React.Fragment>
+    );
+  }
 }
 
-export default App
+export default App;
